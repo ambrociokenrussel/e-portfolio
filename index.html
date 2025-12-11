@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio | Ken Russel Ambrocio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="#home" class="logo">E-Portfolio<span class="dot">.</span></a>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#seminars">Seminars</a></li>
+                    <li><a href="#reflections">Reflections</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container hero-content">
+            <span class="subtitle">E-Portfolio: CPE407 - Seminars and Fieldtrips</span>
+            <h1>Ken Russel Ambrocio</h1>
+            <p class="course-name">Bachelor of Science in Computer Engineering<br>CEIT-03-702P</p>
+            
+            <div class="hero-buttons">
+                <a href="#seminars" class="btn btn-primary">View Compilation</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="requirements-section">
+        <div class="container">
+            <div class="req-box">
+                <h3><i class="fa-solid fa-clipboard-check"></i> Course Requirements</h3>
+                <blockquote>
+                    "After the conduct of all the lined-up seminars and workshop, present all the artifacts or proof of your participation, learnings, and challenges within your Electronic Portfolio."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-card">
+                <div class="about-text">
+                    <p>I am a dedicated Computer Engineering student actively building my professional foundation through academic seminars, hands-on projects, and continuous self-learning. This portfolio documents not only my technical growth but also my development in communication, problem-solving, and collaboration. As I continue to engage with industry trends and emerging technologies, I aim to grow into a well-rounded future engineer ready to contribute meaningful solutions to real-world challenges. This portfolio reflects my journey, my progress, and my commitment to becoming a competent and responsible professional in the field of computer engineering.</p>
+                    <div class="skills-grid">
+                        <span class="pill">Cybersecurity Fundamentals</span>
+                        <span class="pill">Ethical Hacking Basics</span>
+                        <span class="pill">IoT and Smart City Technologies</span>
+                        <span class="pill">Cloud Computing Essentials</span>
+                        <span class="pill">Web Development Technologies</span>
+                        <span class="pill">AI Concepts in Security Systems</span>
+                        <span class="pill">UI/UX Design</span>
+                        <span class="pill">Data Analysis</span>
+                        <span class="pill">Problem-Solving</span>
+                        <span class="pill">Critical Thinking</span>
+                        <span class="pill">Adaptability</span>
+                        <span class="pill">Professionalism & Work Ethics</span>
+                        <span class="pill">Continuous Learning Mindset</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="seminars" class="section bg-soft">
+        <div class="container">
+            <h2 class="section-title">Seminar Compilation</h2>
+            <p class="section-desc">Click on any card to view full details.</p>
+
+            <div class="seminar-grid" id="seminar-grid"></div>
+        </div>
+
+        <div id="modals-container"></div>
+    </section>
+
+    <section id="reflections" class="section">
+        <div class="container">
+            <h2 class="section-title">Overall Reflections</h2>
+            <div class="reflection-card">
+                <p>Attending these webinars has been an eye-opening experience, offering a comprehensive view of both current and emerging technologies in computer engineering. From exploring AI, ChatGPT, and prompt engineering to diving into IoT, cloud computing, and cybersecurity, I gained practical insights into how technology shapes the world around us. Sessions on data analytics, Power BI, and process optimization highlighted the importance of transforming raw information into actionable insights for smarter decision-making. Exploring hardware, Arduino, sensors, and nanotechnology emphasized the significance of bridging software and physical systems to create innovative solutions. I also developed a deeper appreciation for user experience, human-computer interaction, and designing systems that are both functional and intuitive. Cybersecurity-focused webinars taught me the value of ethical practices, privacy awareness, and defending critical infrastructures in a connected world. Learning about blockchain, smart cities, and Industry 4.0 broadened my perspective on how emerging technologies drive innovation and societal progress. Overall, these sessions reinforced the importance of continuous learning, adaptability, and a multidisciplinary approach as a future computer engineer. They challenged me to think critically, apply theoretical knowledge practically, and stay curious about the rapidly evolving tech landscape. The exposure not only strengthened my technical foundation but also motivated me to embrace both creativity and responsibility in my future career.</p>
+            </div>
+        <div class="growth-metrics">
+            <div class="metric">
+                <span class="metric-number">25</span>
+                <div class="metric-label">Seminars Attended</div>
+            </div>
+            <div class="metric">
+                <span class="metric-number">1</span>
+                <div class="metric-label">Seminar Hosted</div>
+            </div>
+            <div class="metric">
+                <span class="metric-number">60+</span>
+                <div class="metric-label">Hours Engagement</div>
+            </div>
+            </div>
+        </div>
+        <div class="container">
+            
+            <div class="reflection-card">
+                <h2>Key Takeaways</h2>
+                <div id="takeaway">
+                    <p>
+                        <ul>
+                        <li>• Keep learning to stay updated with AI, IoT, cloud, and cybersecurity.</li>
+                        <li>• Gain hands-on experience in coding, web, hardware, and data tools.</li>
+                        <li>• Apply cybersecurity best practices and ethical principles.</li>
+                        <li>• Use tools like Python, MySQL, Power BI, Arduino, and cloud platforms.</li>
+                        <li>• Build a portfolio to showcase projects and skills.</li>
+                        <li>• Develop soft skills: communication, problem-solving, and adaptability.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contacts</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value"><a href="mailto:2022-108803@rtu.edu.ph">2022-108803@rtu.edu.ph</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">+63 (994) 989-5057</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">Cainta Rizal, Philippines</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <p>&copy; 2025 Seminars and Fieldtrips E-Portfolio. All rights reserved. | Created for Academic Purposes Only.</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox(event)">
+        <span class="close-lightbox">&times;</span>
+        <img src="" alt="Enlarged Artifact">
+    </div>
+
+    <script>
+        // ========================================
+        // SEMINAR DATA - EASY TO EDIT!
+        // ========================================
+        const seminars = [
+            {
+                id: 1,
+                title: "Power BI: Exploring Data Without Coding",
+                date: "Aug 30, 2025",
+                poster: "assets/PosterS1.png",
+                description: "This webinar focused on Power BI, a data visualization and business intelligence tool that allows users to explore, analyze, and present data without the need for coding. It covered key features such as creating interactive dashboards, connecting to different data sources, and using built-in tools for data transformation and insights.",
+                learnings: "From this webinar, I learned how Power BI simplifies the process of analyzing large datasets through visualizations and drag-and-drop functionalities. As a future computer engineer, this knowledge can help me understand how to present complex data effectively, make data-driven decisions, and even integrate BI tools into software applications or projects.",
+                challenges: "One of the challenges I experienced was getting accustomed to the variety of visual options and figuring out which type of chart best represents the data. Additionally, understanding how to clean and transform raw data efficiently required some careful attention and practice.",
+                images: ["CertS1.png", "S1-1.png", "S1-2.png", "S1-3.png", "S1-4.png"]
+            },
+            {
+                id: 2,
+                title: "Next-Gen Learning: Trends in IT, AI, and the Evolving Industry Landscape",
+                date: "Aug 30, 2025",
+                poster: "assets/PosterS2.png",
+                description: "This webinar explored the latest trends in information technology and artificial intelligence, highlighting how the industry is evolving. Topics included emerging AI applications, shifts in IT infrastructure, automation, and the skills needed to stay relevant in a rapidly changing tech landscape.",
+                learnings: "From attending this webinar, I gained insights into how AI and other advanced technologies are shaping the future of IT. I learned the importance of staying adaptable, continuously upskilling, and understanding industry trends. As a future computer engineer, this knowledge will guide me in making informed career choices, adopting new technologies, and contributing to innovative solutions in my field.",
+                challenges: "A challenge I faced was grasping the breadth of emerging technologies and understanding how they interconnect within the industry. Some concepts, especially the cutting-edge AI applications, were complex and required extra focus to comprehend fully.",
+                images: ["CertS2.png", "S2-1.png", "S2-2.png", "S2-3.png", "S2-4.png"]
+            },
+            {
+                id: 3,
+                title: "The Power of Virtualization: How the Cloud Works Behind the Scenes",
+                date: "Sep 2, 2025",
+                poster: "assets/PosterS3.png",
+                description: "This webinar discussed virtualization and cloud computing, explaining how cloud services operate behind the scenes. It covered concepts such as virtual machines, resource allocation, data centers, and how virtualization enables scalable, efficient, and flexible IT infrastructures.",
+                learnings: "From this webinar, I learned how virtualization is a key enabler of cloud computing, allowing multiple virtual environments to run on a single physical server. As a future computer engineer, this knowledge helps me understand how to design, deploy, and manage scalable systems, optimize resources, and work with cloud platforms in both development and enterprise settings.",
+                challenges: "One difficulty I experienced was understanding the technical details of how hypervisors manage multiple virtual machines and ensure isolation and performance. Connecting these concepts to real-world cloud environments also required careful attention.",
+                images: ["CertS3.png", "S3-1.png", "S3-2.png", "S3-3.png", "S3-4.png", "S3-5.png", "S3-6.png", "S3-7.png", "S3-8.png"]
+            },
+            {
+                id: 4,
+                title: "Network Device: Switches, Routers, Firewalls, Wi-Fi Standards and Configuration",
+                date: "Sep 3, 2025",
+                poster: "assets/PosterS4.png",
+                description: "This webinar provided an in-depth look at networking devices and wireless technologies. It covered the fundamentals of networking, the roles of switches, routers, and firewalls, as well as the evolution of Wi-Fi standards and secure wireless network configuration. Best practices for optimizing network performance and ensuring security were also discussed.",
+                learnings: "From this webinar, I learned how different network devices work together to create efficient and secure networks. I now have a clearer understanding of VLANs, routing protocols, firewall configurations, and Wi-Fi security standards. As a future computer engineer, this knowledge will help me design, implement, and troubleshoot robust network infrastructures, ensuring both connectivity and security in various IT environments.",
+                challenges: "One challenge I faced was keeping track of the technical differences between Wi-Fi standards and understanding the detailed functionalities of each network device. Additionally, grasping how network segmentation and security measures interact in real-world scenarios required extra focus.",
+                images: ["CertS4.png", "S4-1.png", "S4-2.png", "S4-3.png", "S4-4.png", "S4-5.png", "S4-6.png", "S4-7.png", "S4-8.png", "S4-9.png"]
+            },
+            {
+                id: 5,
+                title: "AI-Powered Future: Mastering Prompt Engineering in Generative AI",
+                date: "Sep 6, 2025",
+                poster: "assets/PosterS5.png",
+                description: "This webinar focused on prompt engineering in generative AI, explaining how carefully crafted prompts can guide AI models to produce accurate, creative, and contextually relevant outputs. It covered strategies for optimizing prompts, understanding AI behavior, and leveraging generative AI tools effectively.",
+                learnings: "From attending this webinar, I learned how precise prompt design can significantly influence the quality and usefulness of AI-generated content. As a future computer engineer, this skill can help me integrate AI tools into applications, automate tasks, and develop intelligent systems that respond accurately to user inputs.",
+                challenges: "A challenge I experienced was understanding the nuances of crafting prompts that produce consistent and desired outputs, especially when working with complex or ambiguous tasks. Experimenting with different prompt styles required patience and trial-and-error.",
+                images: ["CertS5.png", "S5-1.png", "S5-2.png", "S5-3.png", "S5-4.png", "S5-5.png", "S5-6.png", "S5-7.png", "S5-8.png", "S5-9.png", "S5-10.png"]
+            },
+            {
+                id: 6,
+                title: "HOUR OF CODE: LEARN AI AND CODING IN A FUN & ENGAGING WAY",
+                date: "Sep 6, 2025",
+                poster: "assets/PosterS6.png",
+                description: "This webinar introduced the basics of coding and artificial intelligence through interactive, beginner-friendly activities. It highlighted how AI works, how simple programs are created, and how coding concepts can be applied in fun, hands-on exercises. The session aimed to make AI and programming more approachable for learners of all levels.",
+                learnings: "From this webinar, I learned how fundamental coding concepts connect to real AI applications. I discovered how simple logic, algorithms, and structured instructions can be used to build small programs that demonstrate how AI processes information. As a future computer engineer, these insights strengthen my foundation in both programming and AI development, which are essential skills for building intelligent systems and solving real-world problems through technology.",
+                challenges: "One challenge I encountered was keeping up with some of the coding activities, especially when switching between new concepts and practical exercises quickly. Understanding how AI logic works behind the interactive tasks also required extra attention, particularly when the examples became more complex.",
+                images: ["CertS6.png", "S6-1.png", "S6-2.png", "S6-3.png", "S6-4.png", "S6-5.png", "S6-6.png", "S6-7.png", "S6-8.png"]
+            },
+            {
+                id: 7,
+                title: "Module 1 and Module 2",
+                date: "Sep 10, 17, and 24, 2025",
+                poster: "assets/PosterS26.png",
+                description: "This seminar provided a comprehensive overview of Intellectual Property (IP) by covering trademarks and branding, prior art searching, and the basic concepts of patents. It explained how IP laws protect innovations, creative works, and brand identities, while also showing how inventors and companies secure ownership of their ideas. Through real examples and practical demonstrations, the session highlighted how trademarks support brand recognition, how prior art search validates the originality of an invention, and how patents safeguard technological breakthroughs.",
+                learnings: "From this seminar, I gained a clearer understanding of how intellectual property ensures that ideas, designs, and technologies are protected from unauthorized use. I learned how trademarks are used to establish a unique brand identity and how prior art searches help determine whether an innovation is truly new. Exploring patent basics gave me insight into how inventions are documented, evaluated, and legally protected.",
+                challenges: "One of the challenges I encountered was interpreting the technical structure of patent documents, as they require precise and formal descriptions. Despite this, the seminar strengthened my appreciation for the legal side of engineering and innovation. As a future computer engineer, this knowledge is highly relevant because the field often involves creating software, hardware designs, and system solutions that may require IP protection. Understanding these concepts helps me build responsible, original work and prepares me to navigate the professional world where innovation and ownership go hand in hand.",
+                images: ["CertS26.png", "S26-1.png", "S26-2.png", "S26-3.png", "S26-4.png", "S26-5.png", "S26-6.png", "S26-7.png", "S26-8.png", "S26-9.png", "S26-10.png", "S26-11.png", "S26-12.png", "S26-13.png", "S26-14.png", "S26-15.png", "S26-16.png", "S26-17.png", "S26-18.png", "S26-19.png", "S26-20.png", "S26-21.png", "S26-22.png", "S26-23.png", "S26-24.png", "S26-25.png"]
+            },
+            {
+                id: 8,
+                title: "SOFTWARE PROGRAMMING 101: A Basic Guide for Aspiring Computer Programmers",
+                date: "Sep 10, 2025",
+                poster: "assets/PosterS7.png",
+                description: "This webinar introduced the fundamentals of software programming, covering the basic principles, logic, and structures used in developing programs. It explained essential programming concepts such as variables, data types, conditional statements, loops, and simple problem-solving techniques. The session aimed to build a solid foundation for beginners who aspire to become programmers.",
+                learnings: "From this webinar, I learned how basic programming constructs work together to form functional programs. I gained a clearer understanding of how to break down problems, design algorithms, and translate logic into code. As a future computer engineer, these foundational skills will be extremely valuable when working on software development, debugging applications, or creating system-level solutions that require precise logical thinking.",
+                challenges: "One challenge I experienced was adjusting to the logical flow of programming, especially when dealing with nested conditions or loop structures. Another challenge was ensuring that my code ran without errors, as even small mistakes—such as incorrect syntax or misplaced symbols—required careful troubleshooting to fix.",
+                images: ["CertS7.png", "S7-1.png", "S7-2.png", "S7-3.png", "S7-4.png", "S7-5.png", "S7-6.png", "S7-7.png", "S7-8.png"]
+            },
+            {
+                id: 9,
+                title: "Python and MySQL in the Age of AI: Smarter Data, Smarter Systems",
+                date: "Sep 13, 2025",
+                poster: "assets/PosterS8.png",
+                description: "This webinar explored how Python and MySQL work together in modern AI-driven systems. It discussed how Python can process, analyze, and automate data workflows, while MySQL serves as a reliable storage and management solution. The webinar also highlighted how AI tools can enhance data handling, optimize queries, and support smarter, more automated systems.",
+                learnings: "From this webinar, I learned how powerful Python becomes when integrated with MySQL, especially in building intelligent applications that rely on structured data. I gained insights into connecting Python to databases, performing CRUD operations, and using libraries to automate data processing. As a future computer engineer, this knowledge will help me create more efficient systems, develop AI-powered applications, and handle data-driven tasks in real-world projects.",
+                challenges: "One challenge I encountered was understanding how to properly structure database queries to prevent errors and ensure efficient performance. Another difficulty was managing the connection between Python scripts and MySQL, especially when dealing with authentication, configuration issues, or handling large datasets.",
+                images: ["CertS8.png", "S8-1.png", "S8-2.png", "S8-3.png", "S8-4.png", "S8-5.png", "S8-6.png", "S8-7.png", "S8-8.png", "S8-9.png", "S8-10.png"]
+            },
+            {
+                id: 10,
+                title: "The Hacker's Journey: A Guide to Getting into Cybersecurity",
+                date: "Sep 20, 2025",
+                poster: "assets/PosterS9.png",
+                description: "This session walked through the world of cybersecurity from a beginner's perspective, highlighting how hackers think, the common attack methods they use, and the defensive strategies professionals rely on. It also introduced core concepts such as ethical hacking, vulnerability assessment, and the skills needed to start a cybersecurity career.",
+                learnings: "Throughout the webinar, I gained a clearer picture of how cybersecurity operates in real scenarios—how threats are identified, how systems are hardened, and how ethical hackers approach problem-solving. It also made me realize the importance of continuous learning in this field, since threats evolve quickly. As someone aiming to become a computer engineer, understanding these principles will help me design systems with better security in mind and apply secure-by-design practices in future projects.",
+                challenges: "One of the tricky parts was keeping up with the different types of attacks and tools mentioned, especially since some required prior knowledge of networking and system administration. I also found it challenging to fully grasp how professionals trace vulnerabilities step-by-step, which showed me that cybersecurity demands patience and strong analytical skills.",
+                images: ["CertS9.png", "S9-1.png", "S9-2.png", "S9-3.png", "S9-4.png", "S9-5.png", "S9-6.png", "S9-7.png", "S9-8.png", "S9-9.png", "S9-10.png", "S9-11.png"]
+            },
+            {
+                id: 11,
+                title: "BLOCKCHAIN UNLEASHED: Powering a Decentralized Future",
+                date: "Sep 26, 2025",
+                poster: "assets/PosterS10.png",
+                description: "This webinar explored blockchain technology beyond the buzzwords, explaining how decentralized systems work, what makes data on a blockchain secure, and why industries are adopting this technology. It also touched on smart contracts, cryptocurrency basics, and real-world applications such as finance, supply chain, and digital identity.",
+                learnings: "From this session, I came to understand how blockchain provides transparency and trust without relying on a central authority. I also learned how consensus mechanisms, hashing, and distributed ledgers come together to secure transactions. As a future computer engineer, this knowledge broadens my perspective on emerging technologies and gives me ideas on how blockchain can be integrated into systems that require secure, tamper-resistant data handling.",
+                challenges: "I found it a bit challenging around the technical flow of transactions inside a blockchain network, especially how nodes validate data and reach consensus. The variety of blockchain platforms and use cases also felt overwhelming at first, making it necessary to revisit some concepts to fully understand how everything fits together.",
+                images: ["CertS10.png", "S10-1.png", "S10-2.png", "S10-3.png", "S10-4.png", "S10-5.png", "S10-6.png", "S10-7.png", "S10-8.png", "S10-9.png"]
+            },
+            {
+                id: 12,
+                title: "LEARN ChatGPT",
+                date: "Oct 6, 2025",
+                poster: "assets/PosterS11.png",
+                description: "This webinar introduced the fundamentals of using ChatGPT and other generative AI tools. It covered how these models understand prompts, generate responses, and assist in different tasks such as coding, writing, research, and automation. The session also highlighted practical tips for crafting effective prompts and using AI responsibly.",
+                learnings: "During the webinar, I learned how to communicate more clearly with AI tools so they produce better and more accurate outputs. I also discovered new ways to apply ChatGPT in studying, coding, and project development. As a future computer engineer, being able to use AI tools efficiently will help me streamline my workflow, speed up debugging, and enhance problem-solving through intelligent assistance.",
+                challenges: "One of the challenges I faced was figuring out the best way to phrase prompts so the AI gives exactly what I need. It also took some practice to understand the model's limitations and how to guide it when results weren't perfect on the first try.",
+                images: ["CertS11.png", "S11-1.png", "S11-2.png", "S11-3.png", "S11-4.png", "S11-5.png", "S11-6.png", "S11-7.png", "S11-8.png", "S11-9.png", "S11-10.png", "S11-11.png"]
+            },
+            {
+                id: 13,
+                title: "NEXT-GEN INNOVATION: Exploring Arduino, Hardware, and Sensors",
+                date: "Oct 7, 2025",
+                poster: "assets/PosterS12.png",
+                description: "The session focused on Arduino as a versatile platform for building interactive hardware projects. It covered how different sensors collect data, how microcontrollers process that information, and how hardware components can be programmed to respond in real time, making prototypes and automation projects possible.",
+                learnings: "I realized how much potential lies in combining hardware with software. Seeing how Arduino reads sensor input and controls outputs gave me a practical perspective on embedded systems. This knowledge is valuable for me as a future computer engineer because it equips me with the skills to create IoT devices, automate tasks, and experiment with hardware-driven solutions.",
+                challenges: "I struggled a bit with understanding the logic of connecting multiple sensors and ensuring they interact correctly with the Arduino board. Translating theoretical concepts into actual circuits also required patience and careful attention to detail.",
+                images: ["CertS12.png", "S12-1.png", "S12-2.png", "S12-3.png", "S12-4.png", "S12-5.png", "S12-6.png", "S12-7.png", "S12-8.png", "S12-9.png"]
+            },
+            {
+                id: 14,
+                title: "Emerging Nanotechnology in Computer Engineering",
+                date: "Oct 8, 2025",
+                poster: "assets/PosterS13.png",
+                description: "This webinar offered a closer look at nanotechnology and how it drives innovation in modern computer engineering. It walked through nanoscale memory devices, the role of spintronics in next-gen computing, the use of nanomaterials in transistors and logic components, and the intricate techniques behind nanofabrication. It also highlighted real-world applications—from medical advancements to everyday tech—showing how progress at the microscopic level leads to massive changes in how systems are built and improved.",
+                learnings: "What stood out to me was how deeply nanotechnology influences the design and performance of computing systems. I learned how shrinking components to the nanoscale can drastically improve speed, efficiency, and energy consumption. Concepts like spintronics and nano-enhanced transistors gave me a new appreciation for how future processors might be built. As a future computer engineer, understanding these emerging technologies broadens my perspective and prepares me to work on cutting-edge innovations that will define the next generation of computing.",
+                challenges: "Some ideas, especially those involving quantum-level behavior and spintronics, were difficult to grasp at first because they operate far beyond the scale of traditional electronics. The nanofabrication processes also seemed complex, and I found it challenging to visualize how such precise structures are created. It made me realize that working with nanotechnology requires both strong theoretical understanding and a careful, detail-oriented approach.",
+                images: ["CertS13.png", "S13-1.png", "S13-2.png", "S13-3.png", "S13-4.png", "S13-5.png", "S13-6.png", "S13-7.png", "S13-8.png", "S13-9.png", "S13-10.png", "S13-11.png"]
+            },
+            {
+                id: 15,
+                title: "CTRL + ALT + DEFEND: Defending Critical infrastructure from Cyber Threats",
+                date: "Oct 10, 2025",
+                poster: "assets/PosterS14.png",
+                description: "This session centered on how critical infrastructures—such as power grids, transportation systems, hospitals, and communication networks—are protected from cyber threats. The discussion highlighted real examples of attacks, the tools used to safeguard industrial systems, and the importance of cybersecurity frameworks in large-scale environments.",
+                learnings: "One thing that really became clear to me during the webinar is how different critical-infrastructure security is compared to regular IT security. I learned how operational technology (OT) systems work, why they're vulnerable, and what strategies are used to detect and prevent attacks. This broadened my understanding of cybersecurity, and as an aspiring computer engineer, it showed me how vital secure system design is, especially when dealing with technologies that millions of people rely on every day.",
+                challenges: "I found it a bit tough to connect all the concepts at first, especially when the discussion shifted toward specialized industrial protocols and real-time monitoring tools. Some of the threat scenarios were complex, and understanding how defenses are applied in large-scale systems required extra focus.",
+                images: ["CertS14.png", "S14-1.png", "S14-2.png", "S14-3.png", "S14-4.png", "S14-5.png", "S14-6.png", "S14-7.png", "S14-8.png", "S14-9.png"]
+            },
+            {
+                id: 16,
+                title: "Ethical Hacking and Responsible Disclosure",
+                date: "Oct 10, 2025",
+                poster: "assets/PosterS15.png",
+                description: "This webinar explored the mindset and methodology behind ethical hacking. Instead of presenting hacking as something malicious, the session showed how security professionals legally identify system weaknesses, document them, and report their findings through responsible disclosure. It also introduced common testing techniques, vulnerability categories, and the ethical standards that guide cybersecurity work.",
+                learnings: "What I took away from this session is that ethical hacking is not just about finding flaws—it's about protecting organizations through structured and responsible practices. I learned how important it is to follow disclosure guidelines, communicate risks clearly, and respect the boundaries set by security policies. As someone preparing for a future in computer engineering, this reminded me that technical skill must always be paired with accountability, especially when handling sensitive systems.",
+                challenges: "I did find it challenging to keep track of the different disclosure models and the processes involved in reporting vulnerabilities. Some of the real-world examples also showed how complicated situations can get when multiple systems or stakeholders are involved, which made me realize how delicate and detail-oriented ethical hacking work can be.",
+                images: ["CertS15.png", "S15-1.png", "S15-2.png", "S15-3.png", "S15-4.png", "S15-5.png", "S15-6.png", "S15-7.png", "S15-8.png", "S15-9.png"]
+            },
+            {
+                id: 17,
+                title: "Cybersecurity and Data Privacy: Protecting the Digital You",
+                date: "Oct 11, 2025",
+                poster: "assets/PosterS16.png",
+                description: "This webinar focused on how cybersecurity and data privacy work together to protect individuals in an increasingly connected world. It explained common online threats, how personal information is collected and stored, and the importance of knowing your rights when navigating digital platforms. The session also emphasized practical ways to secure accounts, devices, and data in everyday situations.",
+                learnings: "Throughout the discussion, I gained a clearer understanding of how small habits—like managing passwords, recognizing phishing attempts, and configuring privacy settings—play a huge role in staying safe online. I also learned how laws and privacy regulations help safeguard user data. As a future computer engineer, these insights remind me that any system I help build must prioritize user protection and respect for personal data, not just functionality.",
+                challenges: "Some privacy regulations and technical terms felt overwhelming at first, especially when comparing how different platforms handle data. I also found it challenging to fully grasp how attackers exploit human behavior rather than just system flaws, which made me realize that cybersecurity is as much about awareness as it is about technology.",
+                images: ["CertS16.png", "S16-1.png", "S16-2.png", "S16-3.png", "S16-4.png", "S16-5.png", "S16-6.png", "S16-7.png"]
+            },
+            {
+                id: 18,
+                title: "Human-Computer Interaction (HCI) and User Experience (UX) Beyond the Screen",
+                date: "Oct 11, 2025",
+                poster: "assets/PosterS17.png",
+                description: "This webinar explored Human-Computer Interaction (HCI) and UX from a broader perspective, emphasizing that interaction doesn't stop at screens. It discussed how humans engage with technology through gestures, voice, physical interfaces, immersive environments, and even everyday objects. The session highlighted the importance of designing experiences that feel natural, intuitive, and inclusive across different platforms and devices.",
+                learnings: "What struck me most was how deeply user behavior and psychology influence system design. I learned that great interfaces aren't just visually appealing—they anticipate user needs, reduce friction, and create meaningful interactions. Seeing examples of voice assistants, wearables, and AR/VR experiences helped me understand how UX extends into the physical world. As a future computer engineer, these insights remind me that the technical side of a system is only half the story; the other half is making sure people can use it comfortably and effectively.",
+                challenges: "One area I had to pay extra attention to was how designers evaluate usability beyond screen-based metrics. Understanding how to measure user comfort, accessibility, and interaction quality in physical or mixed-reality environments felt more complex than traditional UI evaluation. It made me realize that crafting seamless user experiences often requires empathy, testing, and refinement—not just technical skill.",
+                images: ["CertS17.png", "S17-1.png", "S17-2.png", "S17-3.png", "S17-4.png", "S17-5.png", "S17-6.png", "S17-7.png", "S17-8.png", "S17-9.png", "S17-10.png", "S17-11.png"]
+            },
+            {
+                id: 19,
+                title: "The Power of IoT: Driving Data-Informed Governance and Innovation",
+                date: "Oct 12, 2025",
+                poster: "assets/PosterS18.png",
+                description: "This session examined how the Internet of Things (IoT) is transforming governance, public services, and innovation. It showed how connected devices gather real-time data, how that information supports smarter decisions, and how IoT systems are being used in cities, institutions, and industries to improve efficiency, safety, and service delivery. The discussion also covered examples like smart sensors, automated monitoring, and data-driven policymaking.",
+                learnings: "One thing that stood out to me is how powerful IoT becomes when combined with proper data analysis. I realized that sensors and connected devices aren't just 'gadgets'—they're essential tools that help organizations understand what's happening on the ground. This gave me a clearer view of how IoT leads to more informed decisions, whether in traffic management, environmental monitoring, or campus automation. As a future computer engineer, understanding IoT systems lets me contribute to smarter infrastructures and develop solutions that bridge the digital and physical world.",
+                challenges: "I did find it challenging to visualize how large-scale IoT networks are secured and managed, especially when dealing with thousands of devices transmitting data at once. Another difficulty was keeping track of how different protocols and architectures fit together in real scenarios, which showed me that designing reliable IoT systems requires careful planning and a strong grasp of networking and data management.",
+                images: ["CertS18.png", "S18-1.png", "S18-2.png", "S18-3.png", "S18-4.png", "S18-5.png", "S18-6.png", "S18-7.png", "S18-8.png", "S18-9.png"]
+            },
+            {
+                id: 20,
+                title: "Internet of Things (IoT) in Smart Cities",
+                date: "Oct 13, 2025",
+                poster: "assets/PosterS19.png",
+                description: "An introduction to data analytics, visualization, and basic interpretation of datasets.",
+                learnings: "Learned about data cleaning, dataset structures, and basic chart interpretation.",
+                challenges: "Understanding how to use pivot tables and dashboards initially took practice.",
+                images: ["CertS19.png", "S19-1.png", "S19-2.png", "S19-3.png", "S19-4.png", "S19-5.png", "S19-6.png", "S19-7.png", "S19-8.png", "S19-9.png", "S19-10.png", "S19-11.png", "S19-12.png", "S19-13.png", "S19-14.png", "S19-15.png", "S19-16.png", "S19-17.png"]
+            },
+            {
+                id: 21,
+                title: "Cloud Computing Fundamentals: Building your IT Future in the Cloud",
+                date: "Oct 18, 2025",
+                poster: "assets/PosterS20.png",
+                description: "This webinar offered a foundational look at cloud computing, breaking down how cloud services operate and why they've become essential in today's IT landscape. It walked through concepts like virtualization, cloud deployment models, service models (IaaS, PaaS, SaaS), and how organizations use the cloud to scale, store data, and run applications more efficiently.",
+                learnings: "As I listened, I began to see how the cloud reshapes the way systems are built and managed. I learned how resources can be provisioned on demand, how applications can scale automatically, and how cloud platforms simplify tasks that once required complex on-premise setups. This broadened my view of modern IT infrastructure. For me as an aspiring computer engineer, these insights are valuable because cloud skills are now essential—from deploying applications to designing resilient, distributed systems.",
+                challenges: "Some parts required extra focus, especially when comparing the different service models and understanding which scenarios they're best suited for. It was also a bit challenging to visualize how cloud providers manage massive data centers behind the scenes. But these difficulties made me realize that mastering cloud fundamentals takes patience and continuous hands-on practice.",
+                images: ["CertS20.png", "S20-1.png", "S20-2.png", "S20-3.png", "S20-4.png", "S20-5.png", "S20-6.png", "S20-7.png"]
+            },
+            {
+                id: 22,
+                title: "Stay Safe Online: Cyber Security Basics \"Take Control of Your Online Security - Batch 2\"",
+                date: "Oct 22, 2025",
+                poster: "assets/PosterS21.png",
+                description: "This webinar covered the essential principles of staying safe in the digital world. It focused on practical strategies for protecting personal data, recognizing phishing and malware threats, securing accounts, and understanding privacy settings on different platforms. The session aimed to empower users to take control of their online presence and reduce the risk of cyberattacks.",
+                learnings: "One key takeaway for me was how small, consistent actions—like enabling two-factor authentication, using strong passwords, and being cautious with links—can significantly improve online security. I also learned about the broader implications of data breaches and how personal habits affect overall cybersecurity. As a future computer engineer, these lessons remind me to design systems with user security in mind and to anticipate common vulnerabilities when developing applications.",
+                challenges: "I found it a bit tricky to remember all the different types of online threats and the corresponding best practices for each. Additionally, understanding how social engineering works and why people fall for it required me to think beyond the technical side and consider human behavior as part of cybersecurity.",
+                images: ["CertS21.png", "S21-1.png", "S21-2.png", "S21-3.png", "S21-4.png", "S21-5.png", "S21-6.png", "S21-7.png", "S21-8.png", "S21-9.png"]
+            },
+            {
+                id: 23,
+                title: "Current Trends in IT Industry (Hosted)",
+                date: "Nov 9, 2025",
+                poster: "assets/PosterS27.png",
+                description: "This seminar explored several current trends shaping the IT industry today. It covered the growing demand for web development, the expanding use of artificial intelligence in the workplace, practical career guidance for aspiring IT professionals, and the importance of creating a strong digital portfolio using platforms like GitHub, WordPress, and a well-structured CV. The session highlighted how these trends influence hiring, skill development, and professional growth in the modern tech landscape.",
+                learnings: "From this seminar, I gained a clearer view of what employers currently look for in IT graduates, especially in areas like web development and AI-driven tools. I learned how AI is transforming workplace processes and why understanding its applications can give me an edge. The discussion about building a competitive portfolio also made me realize how essential it is to showcase real projects instead of relying on credentials alone. As a future computer engineer, these insights guide me on which skills to prioritize and how to present myself effectively in a highly competitive industry.",
+                challenges: "One challenge I experienced was keeping up with the wide range of tools and platforms mentioned, especially when it came to portfolio-building strategies. It was also a bit overwhelming to see how fast AI and web technologies evolve, making it clear that continuous learning is a must. Even so, the seminar motivated me to start improving my portfolio and stay updated with industry trends.",
+                images: ["CertS27.png", "S27-1.png", "S27-2.png", "S27-3.png", "S27-4.png", "S27-5.png", "S27-6.png", "S27-7.png", "S27-8.png", "S27-9.png", "S27-10.png", "S27-11.png", "S27-12.png", "S27-13.png", "S27-14.png", "S27-15.png", "S27-16.png", "S27-17.png"]
+            },
+            {
+                id: 24,
+                title: "Data Mining and Data Analytics",
+                date: "Nov 16, 2025",
+                poster: "assets/PosterS22.png",
+                description: "This webinar explored the power of data mining and analytics in transforming raw information into actionable insights. It highlighted how businesses can optimize processes like accounts receivable, automate workflows, and make smarter, data-driven decisions using tools such as Celonis. The session emphasized practical applications where data analysis directly contributes to efficiency and value creation.",
+                learnings: "I realized how much potential data holds when properly analyzed. Learning about process mining and analytics gave me a clearer idea of how patterns in data can reveal inefficiencies, predict trends, and guide strategic decisions. For me as a future computer engineer, this knowledge is essential—not only to handle large datasets but also to design systems and applications that can extract meaningful insights to improve performance and solve real-world problems.",
+                challenges: "One challenge was understanding how process mining tools like Celonis map and analyze complex workflows. I also had to focus carefully on translating abstract data patterns into practical actions, which showed me that data analytics isn’t just about numbers—it’s about connecting insights to real outcomes.",
+                images: ["CertS22.png", "S22-1.png", "S22-2.png", "S22-3.png", "S22-4.png", "S22-5.png", "S22-6.png", "S22-7.png", "S22-8.png", "S22-9.png", "S22-10.png", "S22-11.png"]
+            },
+            {
+                id: 25,
+                title: "ELectronic Systems & Technologies 4.0",
+                date: "Nov 29, 2025",
+                poster: "assets/PosterS23.png",
+                description: "This webinar covered the evolution of electronic systems into the Industry 4.0 era, highlighting how advanced technologies like IoT, automation, smart sensors, and AI are integrated into modern electronic systems. It explored the ways these systems enhance efficiency, reliability, and interconnectivity in industrial and consumer applications.",
+                learnings: "Attending this session helped me see how electronic systems today are no longer isolated—they are intelligent, interconnected, and capable of self-monitoring. I learned how integrating sensors, data processing, and automation can improve performance and enable predictive maintenance. As a future computer engineer, this perspective equips me to design and develop systems that are smarter, more adaptive, and ready for the digital transformation of industries.",
+                challenges: "The part I found most challenging was keeping track of the wide range of technologies and understanding how they interact in a fully integrated system. Some concepts, like predictive analytics and cyber-physical integration, required extra effort to visualize how they function in real-world applications.",
+                images: ["CertS23.png", "S23-1.png", "S23-2.png", "S23-3.png", "S23-4.png", "S23-5.png", "S23-6.png", "S23-7.png", "S23-8.png", "S23-9.png", "S23-10.png", "S23-11.png", "S23-12.png", "S23-13.png"]
+            },
+            {
+                id: 26,
+                title: "Advanced Programming and Web Technology",
+                date: "Nov 30, 2025",
+                poster: "assets/PosterS24.png",
+                description: "This workshop focused on advancing coding skills by diving deeper into the core web technologies: HTML, CSS, and JavaScript. Participants explored structuring content semantically, creating responsive and visually appealing designs, and implementing dynamic behavior to make web pages interactive and user-friendly.",
+                learnings: "I gained hands-on insights into how the three technologies complement each other: HTML provides structure, CSS enhances aesthetics and responsiveness, and JavaScript brings functionality to life. This session strengthened my ability to build more polished, interactive web applications. As a future computer engineer, these skills are crucial for creating engaging user interfaces and developing web-based projects efficiently.",
+                challenges: "One challenge was understanding how to balance complex JavaScript functionality with responsive CSS layouts without breaking the design. I also found it tricky to apply advanced CSS techniques while ensuring cross-browser compatibility, which reminded me that attention to detail is key in web development.",
+                images: ["CertS24.png", "S24-1.png", "S24-2.png", "S24-3.png", "S24-4.png", "S24-5.png", "S24-6.png", "S24-7.png", "S24-8.png", "S24-9.png", "S24-10.png", "S24-11.png", "S24-12.png", "S24-13.png", "S24-14.png", "S24-15.png", "S24-16.png", "S24-17.png", "S24-18.png", "S24-19.png", "S24-20.png"]
+            },
+            {
+                id: 27,
+                title: "Best Practices in IT Industry",
+                date: "Dec 6, 2025",
+                poster: "assets/PosterS25.png",
+                description: "This webinar highlighted the essential practices that help engineers succeed in today’s IT industry. It covered real-world workflows, collaboration strategies, skill sets in demand, and approaches for continuous learning and professional growth. The session aimed to prepare participants to not only survive but thrive in a competitive tech environment.",
+                learnings: "I learned that excelling as a modern engineer goes beyond technical knowledge; it also requires adaptability, teamwork, and proactive learning. Understanding industry best practices—like code reviews, agile methodologies, and effective communication—gave me practical ideas for building a strong career foundation. As a future computer engineer, applying these principles will help me stay relevant, deliver quality work, and stand out in professional settings.",
+                challenges: "The challenging part was absorbing the breadth of advice and figuring out which practices to prioritize first. Some concepts, like balancing technical growth with soft skills, felt abstract, requiring me to reflect on how to implement them effectively in real-life scenarios.",
+                images: ["CertS25.png", "S25-1.png", "S25-2.png", "S25-3.png", "S25-4.png", "S25-5.png", "S25-6.png", "S25-7.png", "S25-8.png", "S25-9.png"]
+            }
+        ];
+
+        // ========================================
+        // GENERATE CARDS
+        // ========================================
+        function generateCards() {
+            const grid = document.getElementById('seminar-grid');
+            grid.innerHTML = seminars.map(seminar => `
+                <div class="seminar-card" onclick="openModal('modal-${seminar.id}')">
+                    <div class="card-thumb">
+                        <img src="${seminar.poster}" alt="${seminar.title}">
+                    </div>
+                    <div class="card-mini-info">
+                        <span class="date-tag">${seminar.date}</span>
+                        <h3>${seminar.title}</h3>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ========================================
+        // GENERATE MODALS
+        // ========================================
+        function generateModals() {
+            const container = document.getElementById('modals-container');
+            container.innerHTML = seminars.map(seminar => `
+                <div id="modal-${seminar.id}" class="modal-overlay" onclick="closeModal(event, 'modal-${seminar.id}')">
+                    <div class="modal-content">
+                        <button class="close-modal" onclick="closeModal(event, 'modal-${seminar.id}')">&times;</button>
+
+                        <div class="modal-header">
+                            <h2>${seminar.title}</h2>
+                            <span class="date-badge">${seminar.date}</span>
+                        </div>
+
+                        <div class="modal-body">
+                            <p class="full-desc"><strong>Description:</strong> ${seminar.description}</p>
+
+                            <div class="modal-grid">
+                                <div class="info-box">
+                                    <h4><i class="fa-solid fa-lightbulb"></i> My Learnings</h4>
+                                    <p>${seminar.learnings}</p>
+                                </div>
+
+                                <div class="info-box">
+                                    <h4><i class="fa-solid fa-triangle-exclamation"></i> Challenges</h4>
+                                    <p>${seminar.challenges}</p>
+                                </div>
+                            </div>
+
+                            <div class="artifact-section">
+                                <h4>Certificate and Documentations (Click to enlarge)</h4>
+                                <div class="gallery-container">
+                                    ${seminar.images.map(img => `
+                                        <div class="gallery-item">
+                                            <img src="assets/${img}" class="gallery-thumb" onclick="openLightbox(this)">
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ========================================
+        // MODAL FUNCTIONS
+        // ========================================
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event, modalId) {
+            if (event.target.classList.contains('modal-overlay') || 
+                event.target.classList.contains('close-modal') || 
+                event.target.closest('.close-modal')) {
+                
+                const modal = document.getElementById(modalId);
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // ========================================
+        // LIGHTBOX FUNCTIONS
+        // ========================================
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = lightbox.querySelector('img');
+            lightboxImg.src = img.src;
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            const lightbox = document.getElementById('lightbox');
+            if (event.target.id === 'lightbox' || event.target.classList.contains('close-lightbox')) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // ========================================
+        // DARK MODE TOGGLE
+        // ========================================
+        const toggleBtn = document.getElementById('theme-toggle');
+        const icon = toggleBtn.querySelector('i');
+        const htmlElement = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', currentTheme);
+        updateIcon(currentTheme);
+
+        toggleBtn.addEventListener('click', () => {
+            let theme = htmlElement.getAttribute('data-theme');
+            let newTheme = theme === 'light' ? 'dark' : 'light';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        function updateIcon(theme) {
+            if(theme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        // ========================================
+        // INITIALIZE ON PAGE LOAD
+        // ========================================
+        window.addEventListener('DOMContentLoaded', () => {
+            generateCards();
+            generateModals();
+        });
+
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-links a");
+
+        // Update active link on scroll
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 80; // adjust for navbar height
+                const sectionHeight = section.offsetHeight;
+                // Check if we're in the section's range OR if we're past all sections (for the last one)
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+
+        // Optional: Smooth scroll when clicking nav links
+        navLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70, // adjust for navbar
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        indow.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80; // navbar height offset
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+        }
+
+        // Special case: if at bottom of page, make last section active
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            current = sections[sections.length - 1].getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+    </script>
+</body>
+</html>

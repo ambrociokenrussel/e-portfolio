@@ -503,8 +503,8 @@ ul { list-style: none; }
 
 /* Lightbox image */
 .lightbox-overlay img {
-    max-width: 95%;
-    max-height: 95%;
+    max-width: 90%;
+    max-height: 90%;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
     transition: transform 0.3s ease;
@@ -698,3 +698,4 @@ ul { list-style: none; }
     object-fit: contain; /* keeps image ratio, adds transparent areas */
     background: transparent;
 }
+

@@ -502,7 +502,14 @@
                                 <div class="gallery-container">
                                     ${seminar.images.map(img => `
                                         <div class="gallery-item">
-                                            <img src="assets/${img}" class="gallery-thumb" onclick="openLightbox(this)">
+                                            <img 
+                                                src="assets/${img}"
+                                                class="gallery-thumb"
+                                                loading="lazy"
+                                                decoding="async"
+                                                alt="Seminar documentation image"
+                                                onclick="openLightbox(this)"
+                                            >
                                         </div>
                                     `).join('')}
                                 </div>
@@ -680,4 +687,5 @@
 </body>
 
 </html>
+
 

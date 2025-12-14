@@ -659,35 +659,23 @@
     });
 });
 // ========================================
-// PAGE LOADER (WAIT FOR ALL IMAGES)
+// FAST LOADER (DO NOT WAIT FOR IMAGES)
 // ========================================
-function waitForImages() {
-    const images = Array.from(document.images);
-    const promises = images.map(img => {
-        if (img.complete) return Promise.resolve();
-        if (img.decode) {
-            return img.decode().catch(() => Promise.resolve());
-        }
-        return new Promise(resolve => {
-            img.addEventListener('load', resolve, { once: true });
-            img.addEventListener('error', resolve, { once: true });
-        });
-    });
-    return Promise.all(promises);
-}
-
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const loader = document.getElementById("page-loader");
-    waitForImages().then(() => {
+
+    // Small delay for smoother transition (optional)
+    setTimeout(() => {
         loader.classList.add("hidden");
-        setTimeout(() => loader.remove(), 600);
-    });
+        setTimeout(() => loader.remove(), 1000);
+    }, 500);
 });
 
     </script>
 </body>
 
 </html>
+
 
 
 

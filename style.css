@@ -699,3 +699,45 @@ ul { list-style: none; }
     background: transparent;
 }
 
+/* =============================
+   PAGE LOADER
+============================= */
+#page-loader {
+    position: fixed;
+    inset: 0;
+    background: white; /* or var(--bg-color) if using theme vars */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-inner {
+    text-align: center;
+}
+
+.loader-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.spinner {
+    width: 45px;
+    height: 45px;
+    border: 5px solid rgba(0,0,0,0.15);
+    border-top-color: #000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

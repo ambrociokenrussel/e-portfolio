@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Portfolio | Ken Russel Ambrocio</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/icon.png">
 </head>
+
 <body>
-    <!-- ===== PAGE LOADER ===== -->
+
     <div id="page-loader">
         <div class="loader-inner">
             <img src="assets/icon.png" alt="Loading Logo" class="loader-logo">
@@ -21,7 +25,6 @@
             <p>Loading portfolio...</p>
         </div>
     </div>
-    <!-- ===== END PAGE LOADER ===== -->
 
     <nav class="navbar">
         <div class="container nav-flex">
@@ -84,7 +87,6 @@
                         <span class="pill">Adaptability</span>
                         <span class="pill">Professionalism & Work Ethics</span>
                         <span class="pill">Continuous Learning Mindset</span>
-
                     </div>
                 </div>
             </div>
@@ -95,51 +97,49 @@
         <div class="container">
             <h2 class="section-title">Seminar Compilation</h2>
             <p class="section-desc">Click on any card to view full details.</p>
-
-            <div class="seminar-grid" id="seminar-grid"></div>
+            <div class="seminar-grid" id="seminar-grid">
+                </div>
         </div>
-
         <div id="modals-container"></div>
     </section>
 
     <section id="reflections" class="section">
         <div class="container">
             <h2 class="section-title">Overall Reflections</h2>
+            
             <div class="reflection-card">
                 <p>Attending these webinars has been an eye-opening experience, offering a comprehensive view of both current and emerging technologies in computer engineering. From exploring AI, ChatGPT, and prompt engineering to diving into IoT, cloud computing, and cybersecurity, I gained practical insights into how technology shapes the world around us. Sessions on data analytics, Power BI, and process optimization highlighted the importance of transforming raw information into actionable insights for smarter decision-making. Exploring hardware, Arduino, sensors, and nanotechnology emphasized the significance of bridging software and physical systems to create innovative solutions. I also developed a deeper appreciation for user experience, human-computer interaction, and designing systems that are both functional and intuitive. Cybersecurity-focused webinars taught me the value of ethical practices, privacy awareness, and defending critical infrastructures in a connected world. Learning about blockchain, smart cities, and Industry 4.0 broadened my perspective on how emerging technologies drive innovation and societal progress. Overall, these sessions reinforced the importance of continuous learning, adaptability, and a multidisciplinary approach as a future computer engineer. They challenged me to think critically, apply theoretical knowledge practically, and stay curious about the rapidly evolving tech landscape. The exposure not only strengthened my technical foundation but also motivated me to embrace both creativity and responsibility in my future career.</p>
             </div>
-        <div class="growth-metrics">
-            <div class="metric">
-                <span class="metric-number">27</span>
-                <div class="metric-label">Seminars Attended</div>
+
+            <div class="growth-metrics">
+                <div class="metric">
+                    <span class="metric-number">27</span>
+                    <div class="metric-label">Seminars Attended</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">1</span>
+                    <div class="metric-label">Seminar Hosted</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">60+</span>
+                    <div class="metric-label">Hours Engagement</div>
+                </div>
             </div>
-            <div class="metric">
-                <span class="metric-number">1</span>
-                <div class="metric-label">Seminar Hosted</div>
-            </div>
-            <div class="metric">
-                <span class="metric-number">60+</span>
-                <div class="metric-label">Hours Engagement</div>
-            </div>
-            </div>
-        </div>
-        <div class="container">
-            
-            <div class="reflection-card">
+
+            <div class="reflection-card" style="margin-top: 2rem;">
                 <h2>Key Takeaways</h2>
                 <div id="takeaway">
-                    <p>
-                        <ul>
+                    <ul>
                         <li>• Keep learning to stay updated with AI, IoT, cloud, and cybersecurity.</li>
                         <li>• Gain hands-on experience in coding, web, hardware, and data tools.</li>
                         <li>• Apply cybersecurity best practices and ethical principles.</li>
                         <li>• Use tools like Python, MySQL, Power BI, Arduino, and cloud platforms.</li>
                         <li>• Build a portfolio to showcase projects and skills.</li>
                         <li>• Develop soft skills: communication, problem-solving, and adaptability.</li>
-                        </ul>
-                    </p>
+                    </ul>
                 </div>
             </div>
+        </div>
     </section>
 
     <section id="contact" class="section">
@@ -163,6 +163,7 @@
             </div>
         </div>
     </section>
+
     <footer class="footer-section">
         <p>&copy; 2025 Seminars and Fieldtrips E-Portfolio. All rights reserved. | Created for Academic Purposes Only.</p>
     </footer>
@@ -174,7 +175,7 @@
 
     <script>
         // ========================================
-        // SEMINAR DATA - EASY TO EDIT!
+        // 1. DATA: SEMINAR ARRAY
         // ========================================
         const seminars = [
             {
@@ -303,7 +304,7 @@
                 date: "Oct 7, 2025",
                 poster: "assets/PosterS12.png",
                 description: "The session focused on Arduino as a versatile platform for building interactive hardware projects. It covered how different sensors collect data, how microcontrollers process that information, and how hardware components can be programmed to respond in real time, making prototypes and automation projects possible.",
-                learnings: "I realized how much potential lies in combining hardware with software. Seeing how Arduino reads sensor input and controls outputs gave me a practical perspective on embedded systems. This knowledge is valuable for me as a future computer engineer because it equips me with the skills to create IoT devices, automate tasks, and experiment with hardware-driven solutions.",
+                learnings: "I realized how much potential data holds when properly analyzed. Learning about process mining and analytics gave me a clearer idea of how patterns in data can reveal inefficiencies, predict trends, and guide strategic decisions. For me as a future computer engineer, this knowledge is essential—not only to handle large datasets but also to design systems and applications that can extract meaningful insights to improve performance and solve real-world problems.",
                 challenges: "I struggled a bit with understanding the logic of connecting multiple sensors and ensuring they interact correctly with the Arduino board. Translating theoretical concepts into actual circuits also required patience and careful attention to detail.",
                 images: ["CertS12.png", "S12-1.png", "S12-2.png", "S12-3.png", "S12-4.png", "S12-5.png", "S12-6.png", "S12-7.png", "S12-8.png", "S12-9.png"]
             },
@@ -419,7 +420,7 @@
             },
             {
                 id: 25,
-                title: "ELectronic Systems & Technologies 4.0",
+                title: "Electronic Systems & Technologies 4.0",
                 date: "Nov 29, 2025",
                 poster: "assets/PosterS23.png",
                 description: "This webinar covered the evolution of electronic systems into the Industry 4.0 era, highlighting how advanced technologies like IoT, automation, smart sensors, and AI are integrated into modern electronic systems. It explored the ways these systems enhance efficiency, reliability, and interconnectivity in industrial and consumer applications.",
@@ -450,7 +451,7 @@
         ];
 
         // ========================================
-        // GENERATE CARDS
+        // 2. GENERATE CONTENT
         // ========================================
         function generateCards() {
             const grid = document.getElementById('seminar-grid');
@@ -467,36 +468,28 @@
             `).join('');
         }
 
-        // ========================================
-        // GENERATE MODALS
-        // ========================================
         function generateModals() {
             const container = document.getElementById('modals-container');
             container.innerHTML = seminars.map(seminar => `
                 <div id="modal-${seminar.id}" class="modal-overlay" onclick="closeModal(event, 'modal-${seminar.id}')">
                     <div class="modal-content">
                         <button class="close-modal" onclick="closeModal(event, 'modal-${seminar.id}')">&times;</button>
-
                         <div class="modal-header">
                             <h2>${seminar.title}</h2>
                             <span class="date-badge">${seminar.date}</span>
                         </div>
-
                         <div class="modal-body">
                             <p class="full-desc"><strong>Description:</strong> ${seminar.description}</p>
-
                             <div class="modal-grid">
                                 <div class="info-box">
                                     <h4><i class="fa-solid fa-lightbulb"></i> My Learnings</h4>
                                     <p>${seminar.learnings}</p>
                                 </div>
-
                                 <div class="info-box">
                                     <h4><i class="fa-solid fa-triangle-exclamation"></i> Challenges</h4>
                                     <p>${seminar.challenges}</p>
                                 </div>
                             </div>
-
                             <div class="artifact-section">
                                 <h4>Certificate and Documentations (Click to enlarge)</h4>
                                 <div class="gallery-container">
@@ -521,7 +514,7 @@
         }
 
         // ========================================
-        // MODAL FUNCTIONS
+        // 3. INTERACTION FUNCTIONS (Modal/Lightbox)
         // ========================================
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
@@ -540,9 +533,6 @@
             }
         }
 
-        // ========================================
-        // LIGHTBOX FUNCTIONS
-        // ========================================
         function openLightbox(img) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = lightbox.querySelector('img');
@@ -560,12 +550,13 @@
         }
 
         // ========================================
-        // DARK MODE TOGGLE
+        // 4. DARK MODE TOGGLE
         // ========================================
         const toggleBtn = document.getElementById('theme-toggle');
         const icon = toggleBtn.querySelector('i');
         const htmlElement = document.documentElement;
-
+        
+        // Initialize Theme
         const currentTheme = localStorage.getItem('theme') || 'light';
         htmlElement.setAttribute('data-theme', currentTheme);
         updateIcon(currentTheme);
@@ -590,29 +581,32 @@
         }
 
         // ========================================
-        // INITIALIZE ON PAGE LOAD
+        // 5. NAVIGATION & SCROLL LOGIC
         // ========================================
-        window.addEventListener('DOMContentLoaded', () => {
-            generateCards();
-            generateModals();
-        });
-
         const sections = document.querySelectorAll("section[id]");
         const navLinks = document.querySelectorAll(".nav-links a");
 
-        // Update active link on scroll
+        // Combined Scroll Listener
         window.addEventListener("scroll", () => {
             let current = "";
+            const scrollY = window.scrollY;
 
+            // Check scroll position against sections
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 80; // adjust for navbar height
+                const sectionTop = section.offsetTop - 100; // adjust offset
                 const sectionHeight = section.offsetHeight;
-                // Check if we're in the section's range OR if we're past all sections (for the last one)
-                if (scrollY >= sectionTop - 200) {
+                
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
                     current = section.getAttribute("id");
                 }
             });
 
+            // Special case: Bottom of page = last section active
+            if ((window.innerHeight + scrollY) >= document.body.offsetHeight - 50) {
+                current = sections[sections.length - 1].getAttribute("id");
+            }
+
+            // Update Nav Links
             navLinks.forEach(link => {
                 link.classList.remove("active");
                 if (link.getAttribute("href") === "#" + current) {
@@ -621,66 +615,36 @@
             });
         });
 
-        // Optional: Smooth scroll when clicking nav links
+        // Smooth scroll click handler
         navLinks.forEach(link => {
             link.addEventListener("click", (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute("href").substring(1);
                 const targetSection = document.getElementById(targetId);
+                
                 window.scrollTo({
-                    top: targetSection.offsetTop - 70, // adjust for navbar
+                    top: targetSection.offsetTop - 70, // adjust for navbar height
                     behavior: "smooth"
                 });
             });
         });
 
-        window.addEventListener("scroll", () => {
-    let current = "";
+        // ========================================
+        // 6. INITIALIZATION & LOADERS
+        // ========================================
+        document.addEventListener("DOMContentLoaded", () => {
+            // Generate Data Elements
+            generateCards();
+            generateModals();
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 80; // navbar height offset
-        const sectionHeight = section.offsetHeight;
-
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute("id");
-        }
-
-        // Special case: if at bottom of page, make last section active
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-            current = sections[sections.length - 1].getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
-});
-// ========================================
-// FAST LOADER (DO NOT WAIT FOR IMAGES)
-// ========================================
-document.addEventListener("DOMContentLoaded", () => {
-    const loader = document.getElementById("page-loader");
-
-    // Small delay for smoother transition (optional)
-    setTimeout(() => {
-        loader.classList.add("hidden");
-        setTimeout(() => loader.remove(), 1000);
-    }, 500);
-});
+            // Handle Page Loader
+            const loader = document.getElementById("page-loader");
+            setTimeout(() => {
+                loader.classList.add("hidden");
+                setTimeout(() => loader.remove(), 1000);
+            }, 500);
+        });
 
     </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-

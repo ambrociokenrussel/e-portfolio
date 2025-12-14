@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Portfolio | Ken Russel Ambrocio</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="icon" type="image/png" href="assets/icon.png">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-
+    <!-- ========================================
+         PAGE LOADER
+    ========================================= -->
     <div id="page-loader">
         <div class="loader-inner">
             <img src="assets/icon.png" alt="Loading Logo" class="loader-logo">
@@ -26,10 +31,17 @@
         </div>
     </div>
 
+    <!-- ========================================
+         NAVIGATION BAR
+    ========================================= -->
     <nav class="navbar">
         <div class="container nav-flex">
-            <a href="#home" class="logo">E-Portfolio<span class="dot">.</span></a>
+            <!-- Logo -->
+            <a href="#home" class="logo">
+                E-Portfolio<span class="dot">.</span>
+            </a>
             
+            <!-- Navigation Links and Theme Toggle -->
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
@@ -37,6 +49,8 @@
                     <li><a href="#reflections">Reflections</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                
+                <!-- Dark Mode Toggle Button -->
                 <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
                     <i class="fa-solid fa-moon"></i>
                 </button>
@@ -44,11 +58,17 @@
         </div>
     </nav>
 
+    <!-- ========================================
+         HERO SECTION
+    ========================================= -->
     <section id="home" class="hero-section">
         <div class="container hero-content">
             <span class="subtitle">E-Portfolio: CPE407 - Seminars and Fieldtrips</span>
             <h1>Ken Russel Ambrocio</h1>
-            <p class="course-name">Bachelor of Science in Computer Engineering<br>CEIT-03-702P</p>
+            <p class="course-name">
+                Bachelor of Science in Computer Engineering<br>
+                CEIT-03-702P
+            </p>
             
             <div class="hero-buttons">
                 <a href="#seminars" class="btn btn-primary">View Compilation</a>
@@ -56,23 +76,44 @@
         </div>
     </section>
 
+    <!-- ========================================
+         REQUIREMENTS SECTION
+    ========================================= -->
     <section class="requirements-section">
         <div class="container">
             <div class="req-box">
-                <h3><i class="fa-solid fa-clipboard-check"></i> Course Requirements</h3>
+                <h3>
+                    <i class="fa-solid fa-clipboard-check"></i> 
+                    Course Requirements
+                </h3>
                 <blockquote>
-                    "After the conduct of all the lined-up seminars and workshop, present all the artifacts or proof of your participation, learnings, and challenges within your Electronic Portfolio."
+                    "After the conduct of all the lined-up seminars and workshop, present all the artifacts 
+                    or proof of your participation, learnings, and challenges within your Electronic Portfolio."
                 </blockquote>
             </div>
         </div>
     </section>
 
+    <!-- ========================================
+         ABOUT ME SECTION
+    ========================================= -->
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
+            
             <div class="about-card">
                 <div class="about-text">
-                    <p>I am a dedicated Computer Engineering student actively building my professional foundation through academic seminars, hands-on projects, and continuous self-learning. This portfolio documents not only my technical growth but also my development in communication, problem-solving, and collaboration. As I continue to engage with industry trends and emerging technologies, I aim to grow into a well-rounded future engineer ready to contribute meaningful solutions to real-world challenges. This portfolio reflects my journey, my progress, and my commitment to becoming a competent and responsible professional in the field of computer engineering.</p>
+                    <p>
+                        I am a dedicated Computer Engineering student actively building my professional foundation 
+                        through academic seminars, hands-on projects, and continuous self-learning. This portfolio 
+                        documents not only my technical growth but also my development in communication, problem-solving, 
+                        and collaboration. As I continue to engage with industry trends and emerging technologies, I aim 
+                        to grow into a well-rounded future engineer ready to contribute meaningful solutions to real-world 
+                        challenges. This portfolio reflects my journey, my progress, and my commitment to becoming a 
+                        competent and responsible professional in the field of computer engineering.
+                    </p>
+                    
+                    <!-- Skills Tags -->
                     <div class="skills-grid">
                         <span class="pill">Cybersecurity Fundamentals</span>
                         <span class="pill">Ethical Hacking Basics</span>
@@ -93,24 +134,52 @@
         </div>
     </section>
 
+    <!-- ========================================
+         SEMINAR COMPILATION SECTION
+    ========================================= -->
     <section id="seminars" class="section bg-soft">
         <div class="container">
             <h2 class="section-title">Seminar Compilation</h2>
             <p class="section-desc">Click on any card to view full details.</p>
-            <div class="seminar-grid" id="seminar-grid">
-                </div>
+            
+            <!-- Seminar cards will be dynamically generated here by JavaScript -->
+            <div class="seminar-grid" id="seminar-grid"></div>
         </div>
+        
+        <!-- Modal containers will be dynamically generated here by JavaScript -->
         <div id="modals-container"></div>
     </section>
 
+    <!-- ========================================
+         REFLECTIONS SECTION
+    ========================================= -->
     <section id="reflections" class="section">
         <div class="container">
             <h2 class="section-title">Overall Reflections</h2>
             
+            <!-- Main Reflection -->
             <div class="reflection-card">
-                <p>Attending these webinars has been an eye-opening experience, offering a comprehensive view of both current and emerging technologies in computer engineering. From exploring AI, ChatGPT, and prompt engineering to diving into IoT, cloud computing, and cybersecurity, I gained practical insights into how technology shapes the world around us. Sessions on data analytics, Power BI, and process optimization highlighted the importance of transforming raw information into actionable insights for smarter decision-making. Exploring hardware, Arduino, sensors, and nanotechnology emphasized the significance of bridging software and physical systems to create innovative solutions. I also developed a deeper appreciation for user experience, human-computer interaction, and designing systems that are both functional and intuitive. Cybersecurity-focused webinars taught me the value of ethical practices, privacy awareness, and defending critical infrastructures in a connected world. Learning about blockchain, smart cities, and Industry 4.0 broadened my perspective on how emerging technologies drive innovation and societal progress. Overall, these sessions reinforced the importance of continuous learning, adaptability, and a multidisciplinary approach as a future computer engineer. They challenged me to think critically, apply theoretical knowledge practically, and stay curious about the rapidly evolving tech landscape. The exposure not only strengthened my technical foundation but also motivated me to embrace both creativity and responsibility in my future career.</p>
+                <p>
+                    Attending these webinars has been an eye-opening experience, offering a comprehensive view of both 
+                    current and emerging technologies in computer engineering. From exploring AI, ChatGPT, and prompt 
+                    engineering to diving into IoT, cloud computing, and cybersecurity, I gained practical insights into 
+                    how technology shapes the world around us. Sessions on data analytics, Power BI, and process optimization 
+                    highlighted the importance of transforming raw information into actionable insights for smarter 
+                    decision-making. Exploring hardware, Arduino, sensors, and nanotechnology emphasized the significance 
+                    of bridging software and physical systems to create innovative solutions. I also developed a deeper 
+                    appreciation for user experience, human-computer interaction, and designing systems that are both 
+                    functional and intuitive. Cybersecurity-focused webinars taught me the value of ethical practices, 
+                    privacy awareness, and defending critical infrastructures in a connected world. Learning about blockchain, 
+                    smart cities, and Industry 4.0 broadened my perspective on how emerging technologies drive innovation 
+                    and societal progress. Overall, these sessions reinforced the importance of continuous learning, 
+                    adaptability, and a multidisciplinary approach as a future computer engineer. They challenged me to 
+                    think critically, apply theoretical knowledge practically, and stay curious about the rapidly evolving 
+                    tech landscape. The exposure not only strengthened my technical foundation but also motivated me to 
+                    embrace both creativity and responsibility in my future career.
+                </p>
             </div>
-
+            
+            <!-- Growth Metrics -->
             <div class="growth-metrics">
                 <div class="metric">
                     <span class="metric-number">27</span>
@@ -125,8 +194,9 @@
                     <div class="metric-label">Hours Engagement</div>
                 </div>
             </div>
-
-            <div class="reflection-card" style="margin-top: 2rem;">
+            
+            <!-- Key Takeaways -->
+            <div class="reflection-card">
                 <h2>Key Takeaways</h2>
                 <div id="takeaway">
                     <ul>
@@ -142,19 +212,30 @@
         </div>
     </section>
 
+    <!-- ========================================
+         CONTACT SECTION
+    ========================================= -->
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Contacts</h2>
+            
             <div class="contact-content">
                 <div class="contact-info">
+                    <!-- Email -->
                     <div class="contact-item">
                         <div class="contact-label">Email</div>
-                        <div class="contact-value"><a href="mailto:2022-108803@rtu.edu.ph">2022-108803@rtu.edu.ph</a></div>
+                        <div class="contact-value">
+                            <a href="mailto:2022-108803@rtu.edu.ph">2022-108803@rtu.edu.ph</a>
+                        </div>
                     </div>
+                    
+                    <!-- Phone -->
                     <div class="contact-item">
                         <div class="contact-label">Phone</div>
                         <div class="contact-value">+63 (994) 989-5057</div>
                     </div>
+                    
+                    <!-- Location -->
                     <div class="contact-item">
                         <div class="contact-label">Location</div>
                         <div class="contact-value">Cainta Rizal, Philippines</div>
@@ -164,18 +245,30 @@
         </div>
     </section>
 
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
     <footer class="footer-section">
-        <p>&copy; 2025 Seminars and Fieldtrips E-Portfolio. All rights reserved. | Created for Academic Purposes Only.</p>
+        <p>
+            &copy; 2025 Seminars and Fieldtrips E-Portfolio. All rights reserved. | 
+            Created for Academic Purposes Only.
+        </p>
     </footer>
 
+    <!-- ========================================
+         LIGHTBOX OVERLAY (for enlarged images)
+    ========================================= -->
     <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox(event)">
         <span class="close-lightbox">&times;</span>
         <img src="" alt="Enlarged Artifact">
     </div>
 
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
     <script>
         // ========================================
-        // 1. DATA: SEMINAR ARRAY
+        // SEMINAR DATA ARRAY
         // ========================================
         const seminars = [
             {
@@ -451,7 +544,7 @@
         ];
 
         // ========================================
-        // 2. GENERATE CONTENT
+        // GENERATE SEMINAR CARDS
         // ========================================
         function generateCards() {
             const grid = document.getElementById('seminar-grid');
@@ -468,18 +561,24 @@
             `).join('');
         }
 
+        // ========================================
+        // GENERATE MODAL POPUPS
+        // ========================================
         function generateModals() {
             const container = document.getElementById('modals-container');
             container.innerHTML = seminars.map(seminar => `
                 <div id="modal-${seminar.id}" class="modal-overlay" onclick="closeModal(event, 'modal-${seminar.id}')">
                     <div class="modal-content">
                         <button class="close-modal" onclick="closeModal(event, 'modal-${seminar.id}')">&times;</button>
+                        
                         <div class="modal-header">
                             <h2>${seminar.title}</h2>
                             <span class="date-badge">${seminar.date}</span>
                         </div>
+                        
                         <div class="modal-body">
                             <p class="full-desc"><strong>Description:</strong> ${seminar.description}</p>
+                            
                             <div class="modal-grid">
                                 <div class="info-box">
                                     <h4><i class="fa-solid fa-lightbulb"></i> My Learnings</h4>
@@ -490,6 +589,7 @@
                                     <p>${seminar.challenges}</p>
                                 </div>
                             </div>
+                            
                             <div class="artifact-section">
                                 <h4>Certificate and Documentations (Click to enlarge)</h4>
                                 <div class="gallery-container">
@@ -500,7 +600,7 @@
                                                 class="gallery-thumb"
                                                 loading="lazy"
                                                 decoding="async"
-                                                alt="Seminar documentation image"
+                                                alt="Seminar documentation"
                                                 onclick="openLightbox(this)"
                                             >
                                         </div>
@@ -514,7 +614,7 @@
         }
 
         // ========================================
-        // 3. INTERACTION FUNCTIONS (Modal/Lightbox)
+        // MODAL OPEN/CLOSE FUNCTIONS
         // ========================================
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
@@ -533,6 +633,9 @@
             }
         }
 
+        // ========================================
+        // LIGHTBOX OPEN/CLOSE FUNCTIONS
+        // ========================================
         function openLightbox(img) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = lightbox.querySelector('img');
@@ -550,17 +653,18 @@
         }
 
         // ========================================
-        // 4. DARK MODE TOGGLE
+        // DARK MODE TOGGLE
         // ========================================
         const toggleBtn = document.getElementById('theme-toggle');
         const icon = toggleBtn.querySelector('i');
         const htmlElement = document.documentElement;
         
-        // Initialize Theme
+        // Load saved theme preference
         const currentTheme = localStorage.getItem('theme') || 'light';
         htmlElement.setAttribute('data-theme', currentTheme);
         updateIcon(currentTheme);
 
+        // Toggle theme on button click
         toggleBtn.addEventListener('click', () => {
             let theme = htmlElement.getAttribute('data-theme');
             let newTheme = theme === 'light' ? 'dark' : 'light';
@@ -571,7 +675,7 @@
         });
 
         function updateIcon(theme) {
-            if(theme === 'dark') {
+            if (theme === 'dark') {
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
             } else {
@@ -581,32 +685,27 @@
         }
 
         // ========================================
-        // 5. NAVIGATION & SCROLL LOGIC
+        // ACTIVE NAV LINK ON SCROLL
         // ========================================
         const sections = document.querySelectorAll("section[id]");
         const navLinks = document.querySelectorAll(".nav-links a");
 
-        // Combined Scroll Listener
         window.addEventListener("scroll", () => {
             let current = "";
-            const scrollY = window.scrollY;
-
-            // Check scroll position against sections
+            
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100; // adjust offset
-                const sectionHeight = section.offsetHeight;
-                
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                const sectionTop = section.offsetTop - 80;
+                if (scrollY >= sectionTop - 200) {
                     current = section.getAttribute("id");
                 }
             });
 
-            // Special case: Bottom of page = last section active
-            if ((window.innerHeight + scrollY) >= document.body.offsetHeight - 50) {
+            // Handle bottom of page
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                 current = sections[sections.length - 1].getAttribute("id");
             }
 
-            // Update Nav Links
+            // Update active class
             navLinks.forEach(link => {
                 link.classList.remove("active");
                 if (link.getAttribute("href") === "#" + current) {
@@ -615,36 +714,38 @@
             });
         });
 
-        // Smooth scroll click handler
+        // Smooth scroll on nav click
         navLinks.forEach(link => {
             link.addEventListener("click", (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute("href").substring(1);
                 const targetSection = document.getElementById(targetId);
-                
                 window.scrollTo({
-                    top: targetSection.offsetTop - 70, // adjust for navbar height
+                    top: targetSection.offsetTop - 70,
                     behavior: "smooth"
                 });
             });
         });
 
         // ========================================
-        // 6. INITIALIZATION & LOADERS
+        // PAGE LOADER
         // ========================================
         document.addEventListener("DOMContentLoaded", () => {
-            // Generate Data Elements
-            generateCards();
-            generateModals();
-
-            // Handle Page Loader
             const loader = document.getElementById("page-loader");
+            
             setTimeout(() => {
                 loader.classList.add("hidden");
                 setTimeout(() => loader.remove(), 1000);
             }, 500);
         });
 
+        // ========================================
+        // INITIALIZE ON PAGE LOAD
+        // ========================================
+        window.addEventListener('DOMContentLoaded', () => {
+            generateCards();
+            generateModals();
+        });
     </script>
 </body>
 </html>

@@ -1,32 +1,32 @@
-/* =========================================
+/* ==========================================
+   E-PORTFOLIO STYLESHEET
+   Ken Russel Ambrocio - Computer Engineering
+   ========================================== */
+
+/* ==========================================
    1. CSS VARIABLES & THEMES
-   ========================================= */
+   ========================================== */
 :root {
-    /* --- Palette: Pastel (Light Mode) --- */
-    --primary: #A2D2FF;        /* Pastel Blue */
-    --primary-dark: #7aaedb;   /* Darker Blue for text/hover */
-    --secondary: #FFC8DD;      /* Pastel Pink (Accent) */
+    /* Pastel Palette (Light Mode) */
+    --primary: #A2D2FF;                /* Pastel Blue */
+    --primary-dark: #7aaedb;           /* Slightly darker blue for text/hover */
+    --secondary: #FFC8DD;              /* Pastel Pink (Accent) */
+    --bg-body: #FFF9F0;                /* Cream/Off-white */
+    --bg-card: #FFFFFF;                /* Pure White */
+    --bg-soft: #F0F7FF;                /* Very light blue bg for sections */
     
-    /* --- Backgrounds --- */
-    --bg-body: #FFF9F0;        /* Cream/Off-white */
-    --bg-card: #FFFFFF;        /* Pure White */
-    --bg-soft: #F0F7FF;        /* Very light blue for sections */
+    --text-main: #2D3436;              /* Dark Grey (Not pure black) */
+    --text-muted: #636E72;
+    --border-color: rgba(0,0,0,0.05);  /* Subtle borders */
     
-    /* --- Typography Colors --- */
-    --text-main: #2D3436;      /* Dark Grey */
-    --text-muted: #636E72;     /* Muted Grey */
-    
-    /* --- Borders & Shadows --- */
-    --border-color: rgba(0, 0, 0, 0.05);
-    --shadow: 0 10px 40px rgba(162, 210, 255, 0.2);
+    --shadow: 0 10px 40px rgba(162, 210, 255, 0.2);        /* Colored shadow */
     --shadow-hover: 0 20px 50px rgba(162, 210, 255, 0.4);
     
-    /* --- Fonts --- */
     --font-head: 'Poppins', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
 
-/* --- Dark Mode Overrides --- */
+/* Dark Mode Overrides */
 [data-theme="dark"] {
     --bg-body: #1e1e2e;
     --bg-card: #252535;
@@ -38,24 +38,24 @@
     --primary: #A2D2FF; 
     --primary-dark: #8ECAE6;
     
-    --border-color: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(255,255,255,0.1);
     --shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-/* =========================================
-   2. GLOBAL RESETS & BASE STYLES
-   ========================================= */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; 
+/* ==========================================
+   2. GLOBAL RESETS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
-html { 
-    scroll-behavior: smooth; 
-    font-size: 16px; 
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -65,68 +65,38 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4 { 
-    font-family: var(--font-head); 
-    font-weight: 700; 
-    color: var(--text-main); 
+h1, h2, h3, h4 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--text-main);
 }
 
-a { 
-    text-decoration: none; 
-    color: inherit; 
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-ul { 
-    list-style: none; 
+ul {
+    list-style: none;
 }
 
-/* =========================================
-   3. UTILITIES & LAYOUT
-   ========================================= */
-.container { 
-    max-width: 1100px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.section { 
-    padding: 80px 0; 
+.section {
+    padding: 80px 0;
 }
 
-.bg-soft { 
-    background-color: var(--bg-soft); 
+.bg-soft {
+    background-color: var(--bg-soft);
 }
 
-.section-title { 
-    text-align: center; 
-    font-size: 2.2rem; 
-    margin-bottom: 10px; 
-    position: relative; 
-    display: inline-block; 
-    left: 50%; 
-    transform: translateX(-50%); 
-}
-
-/* Decorative Underline for Titles */
-.section-title::after {
-    content: ''; 
-    display: block; 
-    width: 60px; 
-    height: 4px; 
-    background: var(--primary); 
-    border-radius: 10px; 
-    margin: 8px auto 0;
-}
-
-.section-desc { 
-    text-align: center; 
-    color: var(--text-muted); 
-    margin-bottom: 50px; 
-}
-
-/* =========================================
-   4. NAVIGATION (STICKY)
-   ========================================= */
+/* ==========================================
+   3. NAVIGATION (STICKY)
+   ========================================== */
 .navbar {
     position: fixed;
     top: 0;
@@ -136,69 +106,77 @@ ul {
     -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
     padding: 15px 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-[data-theme="dark"] .navbar { 
-    background: rgba(30, 30, 46, 0.8); 
+[data-theme="dark"] .navbar {
+    background: rgba(30, 30, 46, 0.8);
 }
 
-.nav-flex { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo { 
-    font-family: var(--font-head); 
-    font-weight: 700; 
-    font-size: 1.5rem; 
+.logo {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
-.logo .dot { 
-    color: var(--primary); 
+.logo .dot {
+    color: var(--primary);
 }
 
-.nav-right { 
-    display: flex; 
-    align-items: center; 
-    gap: 25px; 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-.nav-links { 
-    display: flex; 
-    list-style: none; 
-    gap: 25px; 
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
 }
 
+/* Base styles for navigation links */
 .nav-links a {
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
     transition: all 0.3s ease;
-    position: relative;
+    position: relative; /* Required for placing the sliding underline */
 }
 
+/* Hover and Active State Colors */
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--primary);
+    color: #A2D2FF;
 }
 
-/* Sliding Underline Animation */
+/* The sliding underline pseudo-element */
 .nav-links a.active::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -5px;       /* Adjust distance from text */
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 2px;        /* Thickness of the line */
     background: #A2D2FF;
-    animation: slideIn 0.3s ease-out;
+    animation: slideIn 0.3s ease-out; /* The animation trigger */
 }
 
+/* The animation definition */
 @keyframes slideIn {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 /* Theme Toggle Button */
@@ -211,14 +189,14 @@ ul {
     transition: transform 0.3s ease;
 }
 
-.theme-btn:hover { 
-    transform: rotate(15deg); 
-    color: var(--primary); 
+.theme-btn:hover {
+    transform: rotate(15deg);
+    color: var(--primary);
 }
 
-/* =========================================
-   5. HERO SECTION
-   ========================================= */
+/* ==========================================
+   4. HERO SECTION
+   ========================================== */
 .hero-section {
     height: 90vh;
     display: flex;
@@ -228,34 +206,33 @@ ul {
     background: linear-gradient(135deg, var(--bg-body) 0%, var(--bg-soft) 100%);
 }
 
-.hero-content h1 { 
-    font-size: 4rem; 
-    line-height: 1.1; 
-    margin: 10px 0; 
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 10px 0;
 }
 
-.subtitle { 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    color: var(--primary-dark); 
-    font-weight: 600; 
-    font-size: 0.9rem; 
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
-.course-name { 
-    color: var(--text-muted); 
-    font-size: 1.2rem; 
-    margin-bottom: 30px; 
+.course-name {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
-.hero-buttons { 
-    display: flex; 
-    gap: 15px; 
-    justify-content: center; 
-    margin-top: 20px; 
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-/* --- Buttons --- */
 .btn {
     padding: 12px 28px;
     border-radius: 12px;
@@ -267,33 +244,33 @@ ul {
     gap: 8px;
 }
 
-.btn-primary { 
-    background: var(--primary); 
-    color: #2D3436; 
+.btn-primary {
+    background: var(--primary);
+    color: #2D3436;
 }
 
-.btn-primary:hover { 
-    background: var(--secondary); 
-    transform: translateY(-3px); 
-    box-shadow: 0 10px 20px rgba(255, 200, 221, 0.4); 
+.btn-primary:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 200, 221, 0.4);
 }
 
-.btn-outline { 
-    border: 2px solid var(--text-main); 
-    color: var(--text-main); 
+.btn-outline {
+    border: 2px solid var(--text-main);
+    color: var(--text-main);
 }
 
-.btn-outline:hover { 
-    background: var(--text-main); 
-    color: var(--bg-body); 
-    transform: translateY(-3px); 
+.btn-outline:hover {
+    background: var(--text-main);
+    color: var(--bg-body);
+    transform: translateY(-3px);
 }
 
-/* =========================================
-   6. REQUIREMENTS & ABOUT
-   ========================================= */
-.requirements-section { 
-    padding: 40px 0; 
+/* ==========================================
+   5. REQUIREMENTS BOX
+   ========================================== */
+.requirements-section {
+    padding: 40px 0;
 }
 
 .req-box {
@@ -304,18 +281,48 @@ ul {
     text-align: center;
 }
 
-.req-box h3 { 
-    color: var(--primary-dark); 
-    font-size: 1rem; 
-    margin-bottom: 10px; 
-    text-transform: uppercase; 
+.req-box h3 {
+    color: var(--primary-dark);
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-.req-box blockquote { 
-    font-style: italic; 
-    color: var(--text-muted); 
-    max-width: 800px; 
-    margin: 0 auto; 
+.req-box blockquote {
+    font-style: italic;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   6. ABOUT ME SECTION
+   ========================================== */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Cute Underline */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 10px;
+    margin: 8px auto 0;
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 50px;
 }
 
 .about-card {
@@ -328,12 +335,12 @@ ul {
     margin: 0 auto;
 }
 
-.skills-grid { 
-    margin-top: 25px; 
-    display: flex; 
-    justify-content: center; 
-    gap: 10px; 
-    flex-wrap: wrap; 
+.skills-grid {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .pill {
@@ -346,16 +353,136 @@ ul {
     border: 1px solid var(--primary);
 }
 
-/* =========================================
-   7. SEMINAR CARDS (GRID)
-   ========================================= */
-.seminar-grid {
+/* ==========================================
+   7. SEMINAR CARDS (GALLERY STYLE)
+   ========================================== */
+.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Pseudo Image Header (Colored Block) */
+.card-image-header {
+    height: 140px;
+    background: linear-gradient(45deg, var(--primary), #CDB4DB);
+    position: relative;
+}
+
+.header-2 {
+    background: linear-gradient(45deg, #FFC8DD, #FFAFCC);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+}
+
+.date-badge {
+    background: rgba(255,255,255,0.9);
+    color: #2d3436;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-body h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.detail-item h4 {
+    font-size: 0.85rem;
+    color: var(--primary-dark);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.detail-item p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+/* Artifact Gallery Mini-Grid */
+.artifact-gallery {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--bg-soft);
+}
+
+.artifact-gallery h4 {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+.gallery-row {
+    display: flex;
+    gap: 10px;
+}
+
+.artifact-thumb {
+    width: 60px;
+    height: 60px;
+    background: var(--bg-soft);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: var(--primary-dark);
+    border: 1px dashed var(--primary);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.artifact-thumb:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* ==========================================
+   8. SEMINAR GRID LAYOUT
+   ========================================== */
+.seminar-grid {
+    display: grid;
+    /* This automatically creates 3 columns, dropping to 2 or 1 on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     margin-top: 20px;
 }
 
+/* ==========================================
+   9. SEMINAR CARD STYLING
+   ========================================== */
 .seminar-card {
     background-color: var(--bg-card);
     border-radius: 20px;
@@ -363,9 +490,9 @@ ul {
     cursor: pointer;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(0,0,0,0.05);
     position: relative;
-    height: 300px;
+    height: 300px; /* Fixed height for uniformity */
     display: flex;
     flex-direction: column;
 }
@@ -376,21 +503,25 @@ ul {
 }
 
 .card-thumb {
-    height: 65%;
+    height: 65%; /* Keeps the image area tall */
     width: 100%;
-    background-color: #e0e0e0;
-    overflow: hidden;
+    background-color: #e0e0e0; /* Gray placeholder color while loading */
+    overflow: hidden; /* Cuts off any part of the image that sticks out */
     position: relative;
 }
 
 .card-thumb img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    /* CRITICAL SETTING: 
+       'cover' crops the image slightly to fill the box perfectly (looks best).
+       'contain' shows the whole poster but might leave gray empty space on sides. */
+    object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease; /* Smooth zoom effect */
 }
 
+/* Optional: Zoom the poster slightly when hovering over the card */
 .seminar-card:hover .card-thumb img {
     transform: scale(1.1);
 }
@@ -417,68 +548,9 @@ ul {
     letter-spacing: 1px;
 }
 
-/* =========================================
-   8. REFLECTIONS & METRICS
-   ========================================= */
-.reflection-card { 
-    background: var(--bg-card); 
-    padding: 40px; 
-    border-radius: 20px; 
-    box-shadow: var(--shadow); 
-    text-align: center; 
-    border-left: 5px solid var(--secondary); 
-}
-
-.growth-metrics {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
-    gap: 2rem;
-    margin: 3rem 0;
-    justify-content: center;
-}
-
-.metric {
-    text-align: center;
-    padding: 2rem;
-    background: var(--bg-soft); 
-    border-radius: 12px;
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    border: 1px solid var(--border-color);
-}
-
-.metric:hover {
-    background: var(--primary-dark); 
-    color: white;
-    transform: translateY(-5px);
-}
-
-.metric-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-dark); 
-    display: block;
-    margin-bottom: 0.5rem;
-    transition: color 0.3s ease;
-}
-
-.metric:hover .metric-number,
-.metric:hover .metric-label {
-    color: white;
-}
-
-.metric-label {
-    font-weight: 600;
-    color: var(--text-main); 
-    transition: color 0.3s ease;
-}
-
-#takeaway {
-    text-align: center;
-}
-
-/* =========================================
-   9. MODALS
-   ========================================= */
+/* ==========================================
+   10. MODAL SYSTEM (THE POPUP)
+   ========================================== */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -488,15 +560,19 @@ ul {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(5px);
     z-index: 2000;
+    
+    /* Animation States: Hidden by default */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
 }
 
+/* When Active (Added via JS) */
 .modal-overlay.active {
     opacity: 1;
     visibility: visible;
@@ -506,20 +582,23 @@ ul {
     background: var(--bg-card);
     width: 100%;
     max-width: 700px;
-    max-height: 85vh;
-    overflow-y: auto;
+    max-height: 85vh; /* Prevents it from being too tall */
+    overflow-y: auto; /* scroll inside modal if needed */
     border-radius: 24px;
     padding: 40px;
     position: relative;
     box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    
+    /* Animation: Scale Up Effect */
     transform: scale(0.8);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy effect */
 }
 
 .modal-overlay.active .modal-content {
     transform: scale(1);
 }
 
+/* Close Button */
 .close-modal {
     position: absolute;
     top: 20px;
@@ -532,25 +611,26 @@ ul {
     transition: 0.2s;
 }
 
-.close-modal:hover { 
-    color: var(--primary-dark); 
-    transform: rotate(90deg); 
+.close-modal:hover {
+    color: var(--primary-dark);
+    transform: rotate(90deg);
 }
 
-.modal-header { 
-    margin-bottom: 20px; 
-    border-bottom: 1px solid var(--bg-soft); 
-    padding-bottom: 15px; 
+/* Modal Internal Styling */
+.modal-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--bg-soft);
+    padding-bottom: 15px;
 }
 
-.modal-header h2 { 
-    font-size: 1.8rem; 
-    color: var(--text-main); 
+.modal-header h2 {
+    font-size: 1.8rem;
+    color: var(--text-main);
 }
 
-.full-desc { 
-    margin-bottom: 25px; 
-    color: var(--text-main); 
+.full-desc {
+    margin-bottom: 25px;
+    color: var(--text-main);
 }
 
 .modal-grid {
@@ -566,68 +646,66 @@ ul {
     border-radius: 12px;
 }
 
-.info-box h4 { 
-    font-size: 0.9rem; 
-    margin-bottom: 8px; 
-    color: var(--primary-dark); 
+.info-box h4 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: var(--primary-dark);
 }
 
-.info-box p { 
-    font-size: 0.9rem; 
-    color: var(--text-muted); 
+.info-box p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
 
-/* Modal Artifacts */
-.artifact-section h4 { 
-    font-size: 0.9rem; 
-    margin-bottom: 10px; 
-    color: var(--text-muted); 
-    text-transform: uppercase; 
+.artifact-section h4 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
 }
 
-.gallery-container {
-    display: grid;
-    gap: 15px; 
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-}
-
-.gallery-thumb {
+.artifact-placeholder {
     width: 100%;
-    height: auto;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
-    border: 1px solid var(--border-color);
+    height: 200px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    border: 2px dashed #ccc;
 }
 
-.gallery-thumb:hover {
-    transform: scale(1.05);
-}
-
-/* =========================================
-   10. LIGHTBOX OVERLAY
-   ========================================= */
-#lightbox {
-    display: none;
+/* ==========================================
+   11. LIGHTBOX OVERLAY
+   ========================================== */
+.lightbox-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.85);
-    justify-content: center;
+    background: rgba(0,0,0,0.8);
+    display: none; /* hidden by default */
     align-items: center;
-    z-index: 9999;
+    justify-content: center;
+    z-index: 10000;
 }
 
-#lightbox img {
+/* Lightbox image */
+.lightbox-overlay img {
     max-width: 90%;
     max-height: 90%;
-    object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
 }
 
+.lightbox-overlay img.opened {
+    transform: scale(1);
+}
+
+/* Close button */
 .lightbox-overlay .close-lightbox {
     position: absolute;
     top: 20px;
@@ -637,13 +715,200 @@ ul {
     cursor: pointer;
 }
 
-/* =========================================
-   11. PAGE LOADER
-   ========================================= */
+/* ==========================================
+   12. GALLERY CONTAINER
+   ========================================== */
+.gallery-container {
+    display: grid;
+    gap: 15px; /* space between images */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Thumbnails */
+.gallery-thumb {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.gallery-thumb:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   13. CONTACT SECTION
+   ========================================== */
+#contact {
+    background: var(--bg-soft);
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.contact-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.contact-value {
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.contact-value a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-value a:hover {
+    text-decoration: underline;
+    color: var(--primary-dark);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.contact-pill {
+    padding: 10px 25px;
+    background: var(--bg-card);
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    font-weight: 600;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-pill:hover {
+    transform: translateY(-3px);
+    color: var(--primary-dark);
+}
+
+/* ==========================================
+   14. REFLECTIONS SECTION
+   ========================================== */
+.reflection-card {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    border-left: 5px solid var(--secondary);
+}
+
+#takeaway {
+    text-align: center;
+}
+
+/* ==========================================
+   15. GROWTH METRICS
+   ========================================== */
+.growth-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+
+.metric {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-soft);
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.metric:hover {
+    background: var(--primary-dark);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.metric-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.metric:hover .metric-number {
+    color: white;
+}
+
+.metric-label {
+    font-weight: 600;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+}
+
+.metric:hover .metric-label {
+    color: white;
+}
+
+/* ==========================================
+   16. FOOTER SECTION
+   ========================================== */
+.footer-section {
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--bg-body);
+    border-top: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* ==========================================
+   17. PAGE LOADER
+   ========================================== */
 #page-loader {
     position: fixed;
     inset: 0;
-    background: var(--bg-body);
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -670,93 +935,65 @@ ul {
     width: 45px;
     height: 45px;
     border: 5px solid rgba(0,0,0,0.15);
-    border-top-color: var(--primary-dark);
+    border-top-color: #000;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin: 0 auto 10px;
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-/* =========================================
-   12. CONTACT & FOOTER
-   ========================================= */
-#contact {
-    background: var(--bg-soft);
+/* ==========================================
+   18. LIGHTBOX SPECIFIC STYLING
+   ========================================== */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 
-.contact-content {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+#lightbox img {
+    width: 1920px;
+    height: 1080px;
+    object-fit: contain; /* keeps image ratio, adds transparent areas */
+    background: transparent;
 }
 
-.contact-info {
-    background: var(--bg-card); 
-    border-radius: 12px;
-    padding: 3rem;
-    box-shadow: var(--shadow); 
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-item {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.contact-item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.contact-label {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: var(--text-muted); 
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-}
-
-.contact-value {
-    font-size: 1.3rem;
-    color: var(--primary-dark); 
-    font-weight: 600;
-}
-
-.contact-value a {
-    color: var(--primary-dark);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.contact-value a:hover {
-    text-decoration: underline;
-}
-
-.footer-section {
-    text-align: center;
-    padding: 30px 0;
-    background-color: var(--bg-body);
-    border-top: 1px solid var(--border-color);
-    transition: background-color 0.3s ease;
-}
-
-/* =========================================
-   13. RESPONSIVE MEDIA QUERIES
-   ========================================= */
+/* ==========================================
+   19. RESPONSIVE DESIGN
+   ========================================== */
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 2.8rem; }
-    .nav-links { display: none; } /* Standard Mobile Menu Hide */
-    .seminar-grid { grid-template-columns: 1fr; }
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
     
-    .modal-grid { grid-template-columns: 1fr; }
-    .modal-content { padding: 25px; }
+    .nav-links {
+        display: none; /* Hide menu for simplicity in this demo */
+    }
     
-    .contact-info { padding: 1.5rem; }
-    .contact-value { font-size: 1.1rem; }
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Tweak */
+@media (max-width: 600px) {
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        padding: 25px;
+    }
 }

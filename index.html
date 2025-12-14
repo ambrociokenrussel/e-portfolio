@@ -92,26 +92,15 @@
     </section>
 
     <section id="seminars" class="section bg-soft">
-    <div class="container">
-        <h2 class="section-title">Seminar Compilation</h2>
-        <p class="section-desc">Click on any card to view full details.</p>
+        <div class="container">
+            <h2 class="section-title">Seminar Compilation</h2>
+            <p class="section-desc">Click on any card to view full details.</p>
 
-        <!-- ===== SKELETON LOADER ===== -->
-        <div class="seminar-grid" id="skeleton-wrapper">
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
+            <div class="seminar-grid" id="seminar-grid"></div>
         </div>
-        <!-- ===== END SKELETON ===== -->
 
-        <!-- REAL SEMINAR CARDS -->
-        <div class="seminar-grid" id="seminar-grid"></div>
-    </div>
-
-    <div id="modals-container"></div>
-</section>
+        <div id="modals-container"></div>
+    </section>
 
     <section id="reflections" class="section">
         <div class="container">
@@ -682,17 +671,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
 });
 
-        document.addEventListener("DOMContentLoaded", () => {
-            // Give JS time to render cards
-            setTimeout(() => {
-                document.getElementById("skeleton-wrapper")?.classList.add("hidden");
-            }, 300);
-        });
-
     </script>
 </body>
 
 </html>
+
 
 
 
